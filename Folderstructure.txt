@@ -1,0 +1,12 @@
+src/
+├─ index.js        # File đầu tiên chạy, chứa ReactDOM.render và cấu hình ban đầu, cũng chứa logic của App component
+├─ assets/         # Các tài nguyên như hình ảnh, biểu tượng, v.v.
+├─ components/     # Các components chung có thể được tái sử dụng
+├─ services/       # Các services liên quan đến xử lý API
+├─ styles/         # Các file CSS chung, variables, mixins, v.v.
+│  └─ index.css    # File chung cho styling cấp cao
+└─ screens/        # Các màn hình chính của ứng dụng
+   ├─ Home/
+   │  ├─ Home.jsx
+   │  └─ ...
+   └─ ...

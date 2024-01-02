@@ -1,0 +1,24 @@
+/* Thanh menu bar */
+.menu-bar {
+    background: rgba(0, 0, 0, 0.243); 
+    padding: 10px; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
+
+/* Thêm các kiểu cho các liên kết hoặc các phần tử menu khác */
+.menu-bar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* Kiểu cho nội dung chính */
+.main-content {
+    padding-top: 50px; 
+}
+  
+

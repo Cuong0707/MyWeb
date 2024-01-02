@@ -5,7 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./assets/Background/seabackground.jpg'); 
+  background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ background */
+  background-position: center; /* Căn giữa hình ảnh */
+  background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+  height: 100vh; /* Set chiều cao của body là 100% chiều cao của viewport */
+  margin: 0; /* Loại bỏ khoảng trắng xung quanh body */
+  overflow: hidden;
 }
+/* body { */
+ 
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

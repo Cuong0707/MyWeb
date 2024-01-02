@@ -1,0 +1,17 @@
+
+/* Thanh menu bar */
+.menu-bar {
+    background: rgba(0, 0, 0, 0.243); 
+    padding: 10px; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    /* z-index: 1000;  */
+}
+
+
+
+  
+
