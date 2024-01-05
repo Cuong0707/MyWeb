@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import './Footer.css'
 const Footer = () => {
   return (
-    <footer className="bg-dark text-light mt-5 py-3">
-      <Container>
+    <div className="footer" >
+      <footer className="bg-black text-light mt-5 py-3">
         <div className="d-flex justify-content-between align-items-center">
           <p className="mb-0">&copy; 2023 Your Company</p>
           <div>
@@ -11,8 +12,8 @@ const Footer = () => {
             <a href="#terms-of-service" className="text-light">Terms of Service</a>
           </div>
         </div>
-      </Container>
-    </footer>
+      </footer>
+    </div>
   );
 };
 

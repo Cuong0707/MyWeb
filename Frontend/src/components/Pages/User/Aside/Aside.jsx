@@ -3,7 +3,7 @@ import './Aside.css'
 const Aside = () => {
   return (
     <div className='aside'>
-        <img src="http://webcoban.vn/image/flower.gif" />
+        
     </div>
   );
 };
