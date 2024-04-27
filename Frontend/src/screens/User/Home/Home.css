@@ -2,7 +2,8 @@
     height: 100vh;
     overflow: hidden ;
     position: relative;
-    background-color:#6CC5D9;
+    background-color:#ffffff;
+    background: linear-gradient(to top, #bbbec3, #ebecee);
 }
 .secon{
     position: absolute;
@@ -11,15 +12,16 @@
     right: 9vh;
     bottom: 9vh;
     display: flex;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     flex-direction: column;
-    background-color: #3F8EBF; /* Màu nền của phần trên */
-    border-radius: 10px;
+    background-color: #ffffff; /* Màu nền của phần trên */
     z-index: 5;
 }
 
 .end{
     position: absolute;
+    left: 9vh;
+    right: 9vh;
+    bottom: 9vh;
     bottom: 0;
     text-align: center;
 }

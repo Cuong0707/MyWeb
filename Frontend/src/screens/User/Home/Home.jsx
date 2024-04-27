@@ -19,9 +19,6 @@ const Home = () => {
               <Aside />
             </Col>
             <MapAside />
-            <div className='end'>
-              <Footer />
-            </div>
           </Container>
         </div>
       

@@ -1,15 +1,70 @@
 
-/* Thanh menu bar */
-.menu-bar {   
-    position: fixed; 
+
+/* 
+.menu-bara {   
     top: 0;
     left: 0;
     width: 100%;
     border-radius: 10px;
-    /* z-index: 1000;  */
+
+} */
+.logo{
+    height: auto;
+    width: 100px;
 }
-
-
-
+.menu-bara{
+    display: flex; /* Hiển thị các mục menu theo chiều ngang */
+    flex-direction: column; /* Hiển thị các mục menu theo chiều dọc */
+    align-items: center;
+    margin: auto;
+    height: 100%;
+}
+.menu-bara ul {
+    list-style: none;
+    display: flex;
+    padding:0 ;
+    margin: 0;
+  }
   
-
+  .menu-bara li {
+    position: relative;
+    margin: 20px;
+    padding-top: 5vh;
+  }
+  
+  .menu-bara a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  .menu-bara h5{
+    padding-top: 40px;
+  }
+  .menu-bara a:hover {
+    color: #ff6600; /* Change to your desired hover color */
+  }
+  .menu-bara li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Độ dày của đường kẻ phía trên */
+    background-color: red; /* Màu sắc của đường kẻ */
+    transform: scaleX(0); /* Bắt đầu với chiều rộng là 0 */
+    transform-origin: top center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .menu-bara li:not(.exclude):hover::before {
+    transform: scaleX(1); /* Khi hover, chiều rộng của đường kẻ là 100% */
+  }
+  
+.main-header{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
