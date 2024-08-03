@@ -15,9 +15,10 @@
 .menu-bara{
     display: flex; /* Hiển thị các mục menu theo chiều ngang */
     flex-direction: column; /* Hiển thị các mục menu theo chiều dọc */
-    align-items: center;
     margin: auto;
-    height: 100%;
+    /* align-items: center;
+    height: 100%; */
+    
 }
 .menu-bara ul {
     list-style: none;
@@ -27,9 +28,9 @@
   }
   
   .menu-bara li {
-    position: relative;
+    position: relative; 
     margin: 20px;
-    padding-top: 5vh;
+    padding-top: 1vh;
   }
   
   .menu-bara a {

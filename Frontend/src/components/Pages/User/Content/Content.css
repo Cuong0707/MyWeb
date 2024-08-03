@@ -1,3 +1,15 @@
-/* .content{
-    padding-top: 50px;
-} */
+.body{
+    height: 100px;
+}
+.content{
+    background-color: saddlebrown;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
+    margin-right: 10px; /* Cách lề phải 10px */
+    white-space: nowrap; /* Ngăn ngắt dòng, cho phép nội dung tràn qua lề phải */
+    overflow: visible; /* Cho phép nội dung tràn ra ngoài khung */
+   
+}
