@@ -18,14 +18,15 @@
     flex-direction: column;
     background-color: #ffffff; /* Màu nền của phần trên */
     box-sizing: border-box;
+    overflow: hidden;
     z-index: 1;
 }
 
-.end{
+/* .end{
     position: absolute;
     left: 9vh;
     right: 9vh;
     bottom: 9vh;
     bottom: 0;
     text-align: center;
-}
+} */

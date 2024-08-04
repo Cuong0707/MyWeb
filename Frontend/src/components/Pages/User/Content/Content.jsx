@@ -1,12 +1,27 @@
-import React from 'react';
+import React from 'react'
 import './Content.css'
+import img from '../../../../assets/Img/IMG1.jpg'
 const Content = () => {
   return (
-    <body>
       <div className='content'>
-        <img src="https://didongviet.vn/dchannel/wp-content/uploads/2023/08/hinh-nen-3d-hinh-nen-iphone-dep-3d-didongviet@2x-576x1024.jpg" alt="" width={100}/>
+        <div className='column-1'>
+          <div className='title-item'>
+            <div className='item'>HUYNH NHAT CUONG</div>
+          </div>
+          <div className='subtitle-item'>Giới thiệu bản thân: 
+            Huỳnh Nhật Cường
+            24 Tuổi
+          </div>
+        </div>
+        <div className='column-2'>
+            <div className='showslides'>
+              <img src={img} alt="" />
+            </div>
+            <div className='controls'>
+              
+            </div>
+        </div>
       </div>
-    </body>
   );
 };
 

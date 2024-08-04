@@ -1,15 +1,56 @@
-.body{
-    height: 100px;
-}
+
 .content{
-    background-color: saddlebrown;
-    padding: 20px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    
-    margin-right: 10px; /* Cách lề phải 10px */
+    position: relative;
+    display: flex;
+    margin: 5vh 15vh 8vh 15vh;
+    flex-grow: 1;
+}
+.column-1{
+    position: relative;
+    flex: 1;
+    z-index: 2;
+}
+.title-item{
+    position: absolute;
+    margin-top: 5vh;
+    font-size: calc(5vw + 2vh);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     white-space: nowrap; /* Ngăn ngắt dòng, cho phép nội dung tràn qua lề phải */
     overflow: visible; /* Cho phép nội dung tràn ra ngoài khung */
-   
+}
+.title-item .item{
+    width: 150%;
+    line-height: 1;
+    white-space: pre-line; /* Cho phép nội dung xuống dòng */
+    overflow-wrap: break-word; /* Đảm bảo nội dung dài sẽ được cắt xuống dòng */
+    word-break: break-word; /* Cắt từ để không làm tràn phần tử */
+}
+.subtitle-item{
+    position: absolute;
+    font-size: calc(1vw + 0.5vh);
+    top: calc(10vw + 10vh);
+}
+.column-2{
+    flex: 2;
+    position: relative;
+    background-color: antiquewhite;
+    white-space: nowrap; /* Ngăn ngắt dòng, cho phép nội dung tràn qua lề phải */
+    overflow: visible; /* Cho phép nội dung tràn ra ngoài khung */
+    display: flex;
+    flex-direction: column;
+}
+.showslides{
+    position: absolute;
+    white-space: nowrap;
+    overflow: visible;
+    left: 0;
+    right: - 100px;
+    flex: 9;
+}
+.showslides img{
+    width: auto;
+    height: 100px;
+}
+.controls{
+    flex: 1;
 }

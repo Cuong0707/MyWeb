@@ -41,6 +41,9 @@
     transition: color 0.3s ease;
   }
   .menu-bara h5{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    text-align: center;
     padding-top: 40px;
   }
   .menu-bara a:hover {
