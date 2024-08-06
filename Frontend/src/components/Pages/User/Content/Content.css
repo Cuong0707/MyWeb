@@ -33,24 +33,5 @@
 .column-2{
     flex: 2;
     position: relative;
-    background-color: antiquewhite;
-    white-space: nowrap; /* Ngăn ngắt dòng, cho phép nội dung tràn qua lề phải */
-    overflow: visible; /* Cho phép nội dung tràn ra ngoài khung */
-    display: flex;
-    flex-direction: column;
 }
-.showslides{
-    position: absolute;
-    white-space: nowrap;
-    overflow: visible;
-    left: 0;
-    right: - 100px;
-    flex: 9;
-}
-.showslides img{
-    width: auto;
-    height: 100px;
-}
-.controls{
-    flex: 1;
-}
+

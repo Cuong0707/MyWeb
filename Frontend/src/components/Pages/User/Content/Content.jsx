@@ -1,6 +1,6 @@
 import React from 'react'
 import './Content.css'
-import img from '../../../../assets/Img/IMG1.jpg'
+import Show from './Slideshow/Slideshow'
 const Content = () => {
   return (
       <div className='content'>
@@ -14,12 +14,7 @@ const Content = () => {
           </div>
         </div>
         <div className='column-2'>
-            <div className='showslides'>
-              <img src={img} alt="" />
-            </div>
-            <div className='controls'>
-              
-            </div>
+            <Show/>
         </div>
       </div>
   );
