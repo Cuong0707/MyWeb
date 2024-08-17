@@ -8,10 +8,10 @@
     border-radius: 10px;
 
 } */
-.logo{
+/* .logo{
     height: auto;
     width: 100px;
-}
+} */
 .menu-bara:first-of-type {
   margin-left: 0px;
 }
@@ -44,7 +44,7 @@
   
 .menu-bara li {
   position: relative; 
-  margin: 20px;
+  margin: 1vw;
   padding-top: 1vh;
 }
   

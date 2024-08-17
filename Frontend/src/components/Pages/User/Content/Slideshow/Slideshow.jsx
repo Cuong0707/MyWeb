@@ -3,11 +3,19 @@ import './Slideshow.css'
 import IMG2 from '../../../../../assets/Img/IMG1.jpg'
 import IMG1 from '../../../../../assets/Img/IMG2.jpg'
 import IMG3 from '../../../../../assets/Img/IMG3.jpg'
+import IMG4 from '../../../../../assets/Img/IMG4.jpg'
+import IMG5 from '../../../../../assets/Img/IMG5.jpg'
+import IMG6 from '../../../../../assets/Img/IMG6.jpg'
+import IMG7 from '../../../../../assets/Img/IMG7.jpg'
 const Slideshow = () => {
     const images = [
         IMG1,
         IMG2,
         IMG3,
+        IMG4,
+        IMG5,
+        IMG6,
+        IMG7,
     ]
     const [currentIndex, setCurrentIndex] = useState(0);
     const handlePrevious = () => {
