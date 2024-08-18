@@ -4,8 +4,8 @@ import Show from './Slideshow/Slideshow'
 const Content = () => {
   return (
       <div className='content'>
-        <div className='column-1'>
-          <div className='item-info'>
+        <div className='content-text'>
+          <div className='info-item'>
             <div className='title-item'>
               <div className='item'>Moraine Lake Canada</div>
             </div>
@@ -19,7 +19,7 @@ const Content = () => {
             <button>Scroll down</button>
           </div>
         </div>
-        <div className='column-2'>
+        <div className='content-img'>
             <Show/>
         </div>
       </div>

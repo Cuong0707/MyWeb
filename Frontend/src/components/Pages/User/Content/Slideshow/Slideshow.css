@@ -1,30 +1,49 @@
 .showslides{
-    width: 100%; /* Chiều rộng cố định của component */
-    height: 100%; /* Chiều cao cố định của component */
-    position: absolute;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 .images-container {
     flex: 9;
     display: flex;
-    justify-content: left;
-    max-height: 90%;
+    justify-content: flex-start;
     padding-bottom: 5vh;
+    overflow-x: visible;
+    transition: opacity 0.5s ease-in-out;
 }
 .reps-img{
-    max-width: 100%;
-    margin-right: 10%;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    padding-bottom: 2%;
+}
+.reps-img:nth-of-type(1) {
+    left: 0; /* Đặt ảnh đầu tiên ở bên trái */
+}
+
+.reps-img:nth-of-type(2) {
+    left: 100%; /* Đặt ảnh thứ hai ở giữa */
+    padding-left: 5%;
 }
 .controls{
     flex: 1;
     display: flex;
     justify-content: space-between;
-    
     align-items: center;
 }
 button{
     background-color:transparent;
     border: none;
     height: fit-content;
+}
+.hidden {
+    opacity: 0;
+}
+  
+.visible {
+    opacity: 1;
 }

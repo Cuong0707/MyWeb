@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Slideshow.css'
-import IMG2 from '../../../../../assets/Img/IMG1.jpg'
-import IMG1 from '../../../../../assets/Img/IMG2.jpg'
+import IMG1 from '../../../../../assets/Img/IMG1.jpg'
+import IMG2 from '../../../../../assets/Img/IMG2.jpg'
 import IMG3 from '../../../../../assets/Img/IMG3.jpg'
 import IMG4 from '../../../../../assets/Img/IMG4.jpg'
 import IMG5 from '../../../../../assets/Img/IMG5.jpg'
@@ -20,27 +20,36 @@ const Slideshow = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const handlePrevious = () => {
         setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        // prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        (prevIndex + 1) % images.length
     );
     };
     const handleMiddleButton = () => {
         alert("Middle button clicked!");
       };
     const handleNext = () => {
-        setCurrentIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        setCurrentIndex((nextIndex) =>
+        // nextIndex === images.length - 1 ? 0 : nextIndex + 1
+        (nextIndex - 1 + images.length) % images.length
     );
     };
     return (
       <>
         <div className='showslides'>
             <div className='images-container'>
+            {images.map((src, index) => (
                 <img
+                key={index}
+                src={src}
+                className={`reps-img ${index === currentIndex || index === (currentIndex + 1)%images.length ? 'visible' : 'hidden'}`}
+                />
+            ))}
+                {/* <img
                     src={images[currentIndex]} 
                     className="reps-img" />
                 <img 
                     src={images[(currentIndex + 1) % images.length]}
-                    className="reps-img" />
+                    className="reps-img" /> */}
             </div>
             <div className='controls'>
                 <button onClick={handlePrevious}>⭠</button>
