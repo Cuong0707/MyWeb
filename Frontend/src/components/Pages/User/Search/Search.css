@@ -1,0 +1,13 @@
+.search{
+    position: relative;
+    display: flex;
+    margin: 5vh 15vh 2vh 15vh;
+    flex-grow: 1;
+}
+.search-info{
+    flex: 1;
+    background-color: bisque;
+}
+.search-item{
+    flex: 2;
+}

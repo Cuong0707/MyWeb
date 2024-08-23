@@ -8,6 +8,7 @@ const ScreensRoot = () => (
     <Routes>
       <Route path="/" element={<ScreensUserHome />} />
       <Route path="/admin" element={<ScreensAdminHome />} />
+      <Route path="/search" element={<ScreensUserHome activeComponent="search" />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   </BrowserRouter>

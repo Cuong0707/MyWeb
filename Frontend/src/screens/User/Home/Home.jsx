@@ -1,26 +1,22 @@
 import React from 'react';
-// import { Container, Col } from 'react-bootstrap';
 import './Home.css'
 import Header from '../../../components/Pages/User/Header/Header.jsx';
 import Content from '../../../components/Pages/User/Content/Content.jsx';
-// import Aside from '../../../components/Pages/User/Aside/Aside.jsx';
-// import MapAside from '../../../components/Pages/User/Aside/MapAside.jsx';
-// import Footer from '../../../components/Pages/User/Footer/Footer.jsx';
-const Home = () => {
+import Search from '../../../components/Pages/User/Search/Search.jsx';
+const Home = ({ activeComponent }) => {
+  const renderComponent = () => {
+    switch (activeComponent) {
+      case 'search':
+        return <Search />;
+      default:
+        return <Content />;
+    }
+  };
   return (
     <div className='home'>
-        <div className='secon'>
+        <div className='home-content'>
           <Header />
-          <Content/>
-          {/* <Container className="">
-            <Col md={8} className="">
-              <Content />
-            </Col>
-            <Col md={4}>
-              <Aside />
-            </Col>
-            <MapAside />
-          </Container> */}
+          {renderComponent()}
         </div>
       
     </div>

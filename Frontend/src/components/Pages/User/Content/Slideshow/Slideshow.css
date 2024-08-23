@@ -21,12 +21,20 @@
     object-fit: cover;
     padding-bottom: 2%;
 }
-.reps-img:nth-of-type(1) {
-    left: 0; /* Đặt ảnh đầu tiên ở bên trái */
+/* .reps-img:nth-of-type(1) {
+    left: 0; 
 }
 
 .reps-img:nth-of-type(2) {
-    left: 100%; /* Đặt ảnh thứ hai ở giữa */
+    left: 100%; 
+    padding-left: 5%;
+} */
+
+.firth-img{
+    left: 0;
+}
+.secon-img{
+    left: 100%; 
     padding-left: 5%;
 }
 .controls{

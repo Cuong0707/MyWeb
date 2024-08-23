@@ -7,7 +7,7 @@ import IMG4 from '../../../../../assets/Img/IMG4.jpg'
 import IMG5 from '../../../../../assets/Img/IMG5.jpg'
 import IMG6 from '../../../../../assets/Img/IMG6.jpg'
 import IMG7 from '../../../../../assets/Img/IMG7.jpg'
-const Slideshow = () => {
+const Slideshow = React.memo (() => {
     const images = [
         IMG1,
         IMG2,
@@ -21,7 +21,8 @@ const Slideshow = () => {
     const handlePrevious = () => {
         setCurrentIndex((prevIndex) =>
         // prevIndex === 0 ? images.length - 1 : prevIndex - 1
-        (prevIndex + 1) % images.length
+        (prevIndex - 1 + images.length) % images.length
+        
     );
     };
     const handleMiddleButton = () => {
@@ -30,7 +31,8 @@ const Slideshow = () => {
     const handleNext = () => {
         setCurrentIndex((nextIndex) =>
         // nextIndex === images.length - 1 ? 0 : nextIndex + 1
-        (nextIndex - 1 + images.length) % images.length
+        
+        (nextIndex + 1) % images.length
     );
     };
     return (
@@ -39,9 +41,10 @@ const Slideshow = () => {
             <div className='images-container'>
             {images.map((src, index) => (
                 <img
-                key={index}
-                src={src}
-                className={`reps-img ${index === currentIndex || index === (currentIndex + 1)%images.length ? 'visible' : 'hidden'}`}
+                    key={index}
+                    src={src}
+                    alt={index}
+                    className={`reps-img ${index === currentIndex ? 'visible firth-img' : index === (currentIndex + 1)%images.length ? 'visible secon-img' : 'hidden' } `}
                 />
             ))}
                 {/* <img
@@ -60,6 +63,6 @@ const Slideshow = () => {
         
       </>
   );
-};
+});
 
 export default Slideshow;
