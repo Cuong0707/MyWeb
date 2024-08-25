@@ -1,0 +1,64 @@
+my-watch-store/
+│
+├── .mvn/                        # Thư mục chứa cấu hình Maven (nếu dùng Maven)
+│
+├── .gitignore                   # Tệp để bỏ qua các tệp không cần thiết khi sử dụng git
+├── mvnw                         # Tệp shell script cho Maven Wrapper
+├── mvnw.cmd                     # Tệp batch script cho Maven Wrapper
+├── pom.xml                       # Tệp cấu hình Maven (nếu dùng Maven)
+└── build.gradle                  # Tệp cấu hình Gradle (nếu dùng Gradle)
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── watchstore/
+│   │   │               ├── WatchStoreApplication.java        # Lớp chính của ứng dụng Spring Boot
+│   │   │               ├── config/                          # Cấu hình chung cho ứng dụng
+│   │   │               │   ├── SecurityConfig.java
+│   │   │               │   ├── WebConfig.java
+│   │   │               │   └── SwaggerConfig.java
+│   │   │               ├── controller/                      # Các lớp điều khiển HTTP
+│   │   │               │   ├── ProductController.java
+│   │   │               │   └── UserController.java
+│   │   │               ├── service/                         # Các lớp dịch vụ (business logic)
+│   │   │               │   ├── ProductService.java
+│   │   │               │   └── UserService.java
+│   │   │               ├── repository/                      # Các lớp repository (data access)
+│   │   │               │   ├── ProductRepository.java
+│   │   │               │   └── UserRepository.java
+│   │   │               ├── model/                           # Các lớp mô hình (entities)
+│   │   │               │   ├── Product.java
+│   │   │               │   └── User.java
+│   │   │               ├── dto/                             # Các lớp Data Transfer Object
+│   │   │               │   ├── ProductDTO.java
+│   │   │               │   └── UserDTO.java
+│   │   │               ├── exception/                       # Xử lý lỗi và ngoại lệ
+│   │   │               │   ├── CustomException.java
+│   │   │               │   └── GlobalExceptionHandler.java
+│   │   │               ├── util/                            # Các lớp tiện ích
+│   │   │               │   └── DateUtils.java
+│   │   │               └── mapper/                          # Các lớp ánh xạ giữa entities và DTOs
+│   │   │                   └── ProductMapper.java
+│   │   └── resources/
+│   │       ├── application.properties                        # Cấu hình ứng dụng
+│   │       ├── static/                                     # Các tài nguyên tĩnh như CSS, JS, hình ảnh
+│   │       │   └── images/
+│   │       └── templates/                                  # Các mẫu HTML cho Thymeleaf hoặc các template khác
+│   │           └── product.html
+│   │
+│   └── test/                                               # Thư mục chứa các test
+│       ├── java/
+│       │   └── com/
+│       │       └── example/
+│       │           └── watchstore/
+│       │               ├── controller/
+│       │               │   └── ProductControllerTests.java
+│       │               ├── service/
+│       │               │   └── ProductServiceTests.java
+│       │               └── repository/
+│       │                   └── ProductRepositoryTests.java
+│       └── resources/
+│
+└── Dockerfile                    # Tệp Docker để đóng gói ứng dụng (nếu cần)
