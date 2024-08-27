@@ -1,5 +1,9 @@
 package com.example.watchstore;
 
-public class WatchStoreApplication {
+import org.springframework.boot.SpringApplication;
 
+public class WatchStoreApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(WatchStoreApplication.class, args);
+	}
 }

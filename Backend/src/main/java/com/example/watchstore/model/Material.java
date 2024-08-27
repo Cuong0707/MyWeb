@@ -1,10 +1,15 @@
 package com.example.watchstore.model;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +21,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table
+@Table(name = "Material")
 public class Material {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +30,12 @@ public class Material {
 	
 	@Column(name = "MaterialName", nullable = false, length = 100)
 	private String MaterialName;
+	
+	@OneToMany(mappedBy = "Material")
+	@JsonBackReference
+	private List<Product> products;
+	
+	@OneToMany(mappedBy = "Material")
+	@JsonBackReference
+	private List<Accessory> accessorys;
 }
