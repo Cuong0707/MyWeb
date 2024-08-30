@@ -33,7 +33,7 @@ public class Brand {
 	@Column(name = "BrandName", nullable = false, length = 100)
 	private String brandName;
 	
-	@OneToMany(mappedBy = "Branch", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "branch", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JsonManagedReference
 	private List<Product> products;
 }

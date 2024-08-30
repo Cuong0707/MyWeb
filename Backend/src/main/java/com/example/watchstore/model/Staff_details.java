@@ -18,10 +18,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "employee_details")
-public class Employee_details implements Serializable{
+@Table(name = "staff_details")
+public class Staff_details implements Serializable{
 	@Id
-	@Column(name = "employee_id")
+	@Column(name = "staff_id")
 	private int employeeId;
 	
 	@Column(name = "fullname", nullable = false, length = 100)
@@ -34,6 +34,6 @@ public class Employee_details implements Serializable{
 	private String position;
 	
 	@OneToOne
-	@JoinColumn(name = "employee_id", referencedColumnName = "user_id")
+	@JoinColumn(name = "staff_id", referencedColumnName = "user_id")
 	private User user;
 }

@@ -15,9 +15,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -31,34 +30,27 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "Banner")
-public class Banner {
+@Table(name = "orders")
+public class Orders {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	@Column(name = "banner_id", nullable = false)
-	private int bannerId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "order_id",nullable = false)
+	private int orderId;
 	
-	@Column(name = "created_at")
+	@Column(name = "price")
+	private Double price;
+	
 	@CreatedDate
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "created_at", nullable = false)
 	private LocalDateTime createdAt;
 	
-	@Column(name = "subject", length = 100)
-	private String subject;
-	
-	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(
-			name = "product_id",
-			joinColumns = @JoinColumn(name = "banner_id"),
-			inverseJoinColumns = @JoinColumn(name = "productId")
-	)
-	@JsonManagedReference
-	private List<Product> products;
-	
-	@ManyToOne
-	@JoinColumn(name = "user_id")
+	@OneToOne
+	@JoinColumn(name = "invoice_id",nullable = false,unique = true)
 	@JsonBackReference
-	private User user;
+	private Invoice invoice;
 	
-	
+	@OneToMany(mappedBy = "orders",fetch = FetchType.LAZY)
+	@JsonManagedReference
+	private List<Order_details> order_details;
 }

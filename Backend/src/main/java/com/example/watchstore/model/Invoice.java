@@ -1,13 +1,13 @@
 package com.example.watchstore.model;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 import org.springframework.data.annotation.CreatedDate;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -15,9 +15,9 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -31,34 +31,33 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "Banner")
-public class Banner {
+@Table(name = "Invoice")
+public class Invoice {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY )
-	@Column(name = "banner_id", nullable = false)
-	private int bannerId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "invoice_id", nullable = false)
+	private int invoiceId;
 	
-	@Column(name = "created_at")
+	@Column(name = "total_amount", nullable = false)
+	private Double totalAmount;
+	
+	
+	@Column(name = "create_at")
 	@CreatedDate
 	@Temporal(TemporalType.TIMESTAMP)
-	private LocalDateTime createdAt;
-	
-	@Column(name = "subject", length = 100)
-	private String subject;
-	
-	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(
-			name = "product_id",
-			joinColumns = @JoinColumn(name = "banner_id"),
-			inverseJoinColumns = @JoinColumn(name = "productId")
-	)
-	@JsonManagedReference
-	private List<Product> products;
+	private LocalDateTime createAt;
 	
 	@ManyToOne
-	@JoinColumn(name = "user_id")
+	@JoinColumn(name = "custumer_id")
 	@JsonBackReference
-	private User user;
+	private Custumer_details custumer_details;
 	
+	@ManyToOne
+	@JoinColumn(name = "staff_id")
+	@JsonBackReference
+	private Staff_details staff_details;
 	
+	@OneToOne(mappedBy = "invoice",fetch = FetchType.LAZY)
+	@JsonManagedReference
+	private Orders orders;
 }

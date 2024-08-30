@@ -31,11 +31,11 @@ public class Material {
 	@Column(name = "MaterialName", nullable = false, length = 100)
 	private String MaterialName;
 	
-	@OneToMany(mappedBy = "Material")
+	@OneToMany(mappedBy = "material")
 	@JsonBackReference
 	private List<Product> products;
 	
-	@OneToMany(mappedBy = "Material")
+	@OneToMany(mappedBy = "material")
 	@JsonBackReference
 	private List<Accessory> accessorys;
 }

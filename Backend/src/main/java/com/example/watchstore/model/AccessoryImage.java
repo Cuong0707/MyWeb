@@ -38,6 +38,6 @@ public class AccessoryImage {
 	
 	@ManyToOne
 	@JsonBackReference
-	@JoinColumn(name = "accessoryID")
+	@JoinColumn(name = "AccessoryID")
 	private Accessory accessory;
 }

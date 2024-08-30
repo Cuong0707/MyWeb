@@ -33,7 +33,7 @@ public class WatchType {
 	@Column(name = "TypeName",nullable = false, length = 100)
 	private String typeName;
 	
-	@OneToMany(mappedBy = "WatchType",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "watchType",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JsonManagedReference
 	private List<Product> products;
 }

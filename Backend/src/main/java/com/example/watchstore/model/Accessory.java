@@ -3,6 +3,7 @@ package com.example.watchstore.model;
 
 
 import java.util.List;
+import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -40,7 +41,7 @@ public class Accessory {
 	@ManyToOne
 	@JoinColumn(name = "MaterialID")
 	@JsonBackReference
-	Material material;
+	private Material material;
 	
 	@Column(name = "Price", nullable = false)
 	private Double price;
@@ -54,7 +55,7 @@ public class Accessory {
 	@Column(name = "ImagePath", length = 500)
 	private String imagePath;
 	
-	@OneToMany(mappedBy = "Accessory", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "accessory", fetch = FetchType.LAZY)
 	@JsonManagedReference
 	private List<AccessoryImage> accessoryImages;
 	

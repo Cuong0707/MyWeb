@@ -58,13 +58,14 @@ public class User implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private LocalDateTime createdAt;
 	
-	@OneToMany(mappedBy = "user_id", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
 	@JsonManagedReference
 	private List<Banner> banners;
 	
-	@OneToOne(mappedBy = "User",cascade = CascadeType.ALL, orphanRemoval = true)
+	@OneToOne(mappedBy = "user",cascade = CascadeType.ALL, orphanRemoval = true)
 	private Custumer_details custumer_details;
 	
-	@OneToOne(mappedBy = "User",cascade = CascadeType.ALL, orphanRemoval = true)
-	private Employee_details employee_details;
+	@OneToOne(mappedBy = "user",cascade = CascadeType.ALL, orphanRemoval = true)
+	private Staff_details employee_details;
+	
 }

@@ -64,12 +64,20 @@ public class Product {
 	@JoinColumn(name = "TypeID")
 	private WatchType watchType;
 	
-	@ManyToMany(mappedBy = "Banner")
+	@ManyToMany(mappedBy = "products")
 	@JsonBackReference
 	private List<Banner> banners;
 	
-	@OneToMany(mappedBy = "Product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JsonManagedReference
 	private List<ProductImage> productImages;
 	
+	@OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
+	@JsonManagedReference
+	private List<Order_details> order_details;
+	
+	@ManyToOne
+	@JsonBackReference
+	@JoinColumn(name = "MaterialID")
+	private Material material;
 }

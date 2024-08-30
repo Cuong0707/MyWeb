@@ -34,7 +34,7 @@ public class Gender {
 	@Column(name = "GenderName",nullable = false, length = 50)
 	private String GenderName;
 	
-	@OneToMany(mappedBy = "Gender",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "gender",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JsonManagedReference
 	private List<Product> products;
 	
